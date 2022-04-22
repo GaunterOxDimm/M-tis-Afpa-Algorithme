@@ -8,6 +8,8 @@ console.log("Ok, on continue !");
 console.log("Vous êtes trop jeune !");
 }
 
+--------------------------------------------------------------------------------
+
 //Produit de 2 entiers non nuls
 
 let entier1 = window.prompt("Veuillez saisir un entier non nul: ", "");
@@ -17,9 +19,12 @@ let entier2 = window.prompt("Veuillez saisir un entier non nul: ", "");
 if(entier1 > 0 && entier2 < 0 | entier1 < 0 && entier2 > 0) {
 console.log("Le produit est négatif");
 } else {
-console.log("Le produit est positif");}
+console.log("Le produit est positif");
+}
 
-//Produit de 2 entiers non nuls retournant aussi 0
+--------------------------------------------------------------------------------
+
+//Produit de 2 entiers non nuls retournants aussi 0
 
 let entier1 = window.prompt("Veuillez saisir un entier: ", "");
 
@@ -31,6 +36,8 @@ if(entier1 == 0 | entier2 == 0) {
   console.log("Le produit est négatif")
 }
 console.log("Le produit est positif”);
+
+--------------------------------------------------------------------------------
 
 //Loi de Morgan
 
@@ -62,3 +69,6 @@ if(xp < 2 | permis == n) {
 } else {
   console.log("Vous êtes embauché");
 }
+
+--------------------------------------------------------------------------------
+
