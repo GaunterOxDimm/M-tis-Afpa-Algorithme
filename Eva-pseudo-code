@@ -1,0 +1,64 @@
+//Demander l’âge de l’utilisateur
+
+let age = window.prompt("Veuillez saisir votre âge: ", "");
+
+if(age >= 18) {
+console.log("Ok, on continue !");
+} else {
+console.log("Vous êtes trop jeune !");
+}
+
+//Produit de 2 entiers non nuls
+
+let entier1 = window.prompt("Veuillez saisir un entier non nul: ", "");
+
+let entier2 = window.prompt("Veuillez saisir un entier non nul: ", "");
+
+if(entier1 > 0 && entier2 < 0 | entier1 < 0 && entier2 > 0) {
+console.log("Le produit est négatif");
+} else {
+console.log("Le produit est positif");}
+
+//Produit de 2 entiers non nuls retournant aussi 0
+
+let entier1 = window.prompt("Veuillez saisir un entier: ", "");
+
+let entier2 = window.prompt("Veuillez saisir un entier: ", "");
+
+if(entier1 == 0 | entier2 == 0) {
+  console.log("Le produit est nul");
+} else if(entier1 < 0 | entier2 < 0) {
+  console.log("Le produit est négatif")
+}
+console.log("Le produit est positif”);
+
+//Loi de Morgan
+
+/* Nous avons à embaucher un commercial. Dans les contraintes liées au poste, nous voulons :
+qu'il soit en possession d'un permis valide
+qu'il ait au moins 2 ans d'expérience dans sur poste similaire. 
+Proposez deux algorithmes différents, en appliquant à ce cas la loi de DE MORGAN. */
+
+//1st
+
+let permis = window.prompt(“Permis (y/n): ", "");
+
+let xp = window.prompt(“Nombre d’années d'expérience sur poste similaire: ", "");
+
+if(xp >= 2 && permis == y) {
+  console.log("Vous êtes embauché");
+} else {
+  console.log("Inscris-toi au pôle-emploi”);
+}
+
+//2nd
+
+let permis = window.prompt(“Permis (y/n): ", "");
+
+let xp = window.prompt("2 ans d'expérience sur poste similaire: ", "");
+
+if(xp < 2 | permis == n) {
+  console.log("Inscris-toi au pôle-emploi");
+} else {
+  console.log("Vous êtes embauché");
+}
