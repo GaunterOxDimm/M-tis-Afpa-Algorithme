@@ -7,6 +7,8 @@ l'heure qu'il est, en lui demandant d'abord l'heure, puis les minutes.
 L'algorithme devra ensuite afficher l'heure qu'il sera à la minute suivante.
 Nous partons du principe que l'heure saisie par l'utilisateur est valide ! */
 
+```````
+
 let hour = window.prompt("Indiquez l'heure", ""); 
 let minutes = window.prompt("Indiquez les minutes");
 
@@ -26,6 +28,8 @@ let arr = [];
    console.log(clock(13, 27));
    console.log(clock(13, 59));
    
+````````
+
 // EXERCICE 2
 
 /* Écrire un algorithme qui va demander à l'utilisateur, l'heure qu'il est,
@@ -33,6 +37,7 @@ en lui demandant d'abord l'heure, puis les minutes et enfin les secondes.
 L'algorithme devra ensuite afficher l'heure qu'il sera à la seconde suivante.
 Nous partons du principe que l'heure saisie par l'utilisateur est valide ! */
 
+`````````
 let hour = window.prompt("Indiquez l'heure", "");
 let minutes = window.prompt("Indiquez les minutes", "");
 let seconds = window.prompt("Indiquez les secondes", "");
@@ -56,7 +61,8 @@ let arr = [];
         }
   clock();
   console.log(clock(23, 59, 59)); // return [0, 0, 0]
- 
+  
+ ````````
 
 
 ----------------------------------------------------------------------------------------------------------------
@@ -70,6 +76,7 @@ et 0,08 € au-delà.
 Écrivez un algorithme qui demande à l'utilisateur le nombre de photocopies effectuées et qui affiche la facture correspondante. */
 
 
+````````
 let copy = window.prompt("How many copies did you print?", "");
 
 function bill (copy) {
@@ -84,8 +91,9 @@ function bill (copy) {
   return arr;
 }
 bill();
-console.log(bill(50));
+console.log(bill(50)); // return 4
 
+````````
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -97,6 +105,8 @@ les femmes paient l'impôt si elles ont entre 18 et 35 ans
 les autres ne paient pas d'impôt
 Le programme demandera donc l'âge et le sexe du Zorglubien, et se prononcera 
 donc ensuite sur le fait que l'habitant est imposable ou non. */
+
+`````````
 
 
 
