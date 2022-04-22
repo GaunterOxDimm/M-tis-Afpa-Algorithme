@@ -7,8 +7,8 @@ l'heure qu'il est, en lui demandant d'abord l'heure, puis les minutes.
 L'algorithme devra ensuite afficher l'heure qu'il sera à la minute suivante.
 Nous partons du principe que l'heure saisie par l'utilisateur est valide ! */
 
-let hour = window.prompt("Indiquez l'heure", "") 
-let minutes = window.prompt("Indiquez les minutes")
+let hour = window.prompt("Indiquez l'heure", ""); 
+let minutes = window.prompt("Indiquez les minutes");
 
 function clock(hour, minutes) {  
 let arr = [];
