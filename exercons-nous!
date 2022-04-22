@@ -1,8 +1,8 @@
 HEURE
 
-/* EXERCICE 1
+ //EXERCICE 1
 
-Écrire un algorithme qui va demander à l'utilisateur, 
+/* Écrire un algorithme qui va demander à l'utilisateur, 
 l'heure qu'il est, en lui demandant d'abord l'heure, puis les minutes. 
 L'algorithme devra ensuite afficher l'heure qu'il sera à la minute suivante.
 Nous partons du principe que l'heure saisie par l'utilisateur est valide ! */
@@ -26,12 +26,37 @@ let arr = [];
    console.log(clock(13, 27));
    console.log(clock(13, 59));
    
-/* EXERCICE 2
+// EXERCICE 2
 
-Écrire un algorithme qui va demander à l'utilisateur, l'heure qu'il est,
+/* Écrire un algorithme qui va demander à l'utilisateur, l'heure qu'il est,
 en lui demandant d'abord l'heure, puis les minutes et enfin les secondes. 
 L'algorithme devra ensuite afficher l'heure qu'il sera à la seconde suivante.
 Nous partons du principe que l'heure saisie par l'utilisateur est valide ! */
+
+let hour = window.prompt("Indiquez l'heure", "");
+let minutes = window.prompt("Indiquez les minutes", "");
+let seconds = window.prompt("Indiquez les secondes", "");
+
+function clock(hour, minutes, seconds) {  
+let arr = [];
+  if(0 <= seconds && seconds < 59) {
+      arr.push(hour, minutes, seconds + 1);
+  } else if(seconds == 59){
+    arr.push(hour, minutes + 1, 0);
+    if(minutes == 59){
+      arr = [];
+      arr.push((hour + 1), 0, 0);
+      if(hour == 23){
+        arr = [];
+        arr.push(0, 0, 0);
+      } 
+    }
+  }
+     return arr;
+        }
+  clock();
+  console.log(clock(23, 59, 59)); // return [0, 0, 0]
+ 
 
 
 
