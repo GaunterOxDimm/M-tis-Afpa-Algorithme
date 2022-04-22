@@ -1,22 +1,26 @@
 HEURE
-Écrire un algorithme qui va demander à l'utilisateur, 
+
+*Écrire un algorithme qui va demander à l'utilisateur, 
 l'heure qu'il est, en lui demandant d'abord l'heure, puis les minutes. 
 L'algorithme devra ensuite afficher l'heure qu'il sera à la minute suivante.
-Nous partons du principe que l'heure saisie par l'utilisateur est valide !
+Nous partons du principe que l'heure saisie par l'utilisateur est valide !*
 
 let hour = window.prompt("Indiquez l'heure", "") 
 let minutes = window.prompt("Indiquez les minutes")
 
-let minutes = 0;
-let hour = 0;
-    if(minutes == 59 && hour == 23) {
-      minutes = 0;
-      hour = 0;
-    } else if(0 <= minutes < 59 && 0 <= hour < 23) {
-        minutes++;
+function clock(hour, minutes) {  
+let arr = [];
+  if(0 <= hour && hour < 23 && 0 <= minutes && minutes < 59) {
+      arr.push(hour, minutes + 1);
+  } else if((minutes = 59) && (hour == 23)){
+           
+           arr.push(0, 0);
          }
-    
-   console.log({hour, minutes});
+         return arr;
+        }
+    clock();
+   console.log(clock(23, 59));
+   console.log(clock(15, 3));
 
 ----------------------------------------------------------------------------------------------------------------
 
