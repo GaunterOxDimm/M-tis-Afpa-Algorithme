@@ -59,8 +59,45 @@ let arr = [];
  
 
 
+----------------------------------------------------------------------------------------------------------------
+
+REPROGRAPHIE
+
+/* Un magasin de reprographie facture :
+0,10 € les dix premières photocopies
+0,09 € les vingt suivantes
+et 0,08 € au-delà.
+Écrivez un algorithme qui demande à l'utilisateur le nombre de photocopies effectuées et qui affiche la facture correspondante. */
+
+
+let copy = window.prompt("How many copies did you print?", "");
+
+function bill (copy) {
+  let arr = [];
+  if(copy <= 10) {
+    arr.push(copy * 0.1);
+  } else if(copy <= 30) {
+    arr.push(copy * 0.09);
+  } else if(copy > 30) {
+    arr.push(copy * 0.08);
+  }
+  return arr;
+}
+bill();
+console.log(bill(50));
 
 
 ----------------------------------------------------------------------------------------------------------------
+
+IMPOTS
+
+/* Les habitants de Zorglub paient l'impôt selon les règles suivantes :
+les hommes de plus de 20 ans paient l'impôt
+les femmes paient l'impôt si elles ont entre 18 et 35 ans
+les autres ne paient pas d'impôt
+Le programme demandera donc l'âge et le sexe du Zorglubien, et se prononcera 
+donc ensuite sur le fait que l'habitant est imposable ou non. */
+
+
 
 
