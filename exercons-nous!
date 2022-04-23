@@ -122,7 +122,104 @@ tax(25, "m"); // returns "Vous êtes imposable"
 `````````
 ----------------------------------------------------------------------------------------------------------------
 
+ÉLECTIONS
 
+/*Les élections , obéissent à la règle suivante lorsque l'un des candidats obtient plus de 50% des suffrages, il est élu dès le premier tour.
+en cas de deuxième tour, peuvent participer uniquement les candidats ayant obtenu au moins 12,5% des voix au premier tour.
+Vous devez écrire un algorithme qui permette la saisie des scores de quatre candidats (A, B, C et D) au premier tour.
+Cet algorithme traitera ensuite le candidat A (et uniquement lui), il dira si :
+il est élu,
+il est battu,
+il se trouve en ballottage favorable (il participe au second tour en étant arrivé en tête à l'issue du premier tour)
+il se trouve en ballottage défavorable (il participe au second tour sans avoir été en tête au premier tour). */
+
+``````````````
+
+let scoreA = window.prompt("Saisir le score du candidat A", " %");
+let scoreB = window.prompt("Saisir le score du candidat B", " %");
+let scoreC = window.prompt("Saisir le score du candidat C", " %");
+let scoreD = window.prompt("Saisir le score du candidat D", " %"); 
+
+function election(scoreA, scoreB, scoreC, scoreD) {
+if(scoreA > 50){
+  console.log("Le candidat A est élu.");
+} else if(scoreA < 12.5) {
+  console.log("Le candidat A est battu.");
+} else if(scoreA > scoreB && scoreA > scoreC && scoreA > scoreD) {
+  console.log("Le candidat A passe au second tour en ballotage favorable.")
+} else if(scoreA >= 12.5 && scoreA <= 50) {
+  console.log("Le candidat A passe au second tour en ballotage défavorable.")
+}
+}
+election(13, 16, 15, 15); // returns "Le candidat A passe au second tour en ballotage défavorable."
+
+``````````````
+
+----------------------------------------------------------------------------------------------------------------
+ASSURANCE
+
+Une compagnie d'assurance automobile propose à ses clients quatre familles de tarifs identifiables par une couleur, 
+du moins au plus onéreux :
+tarif bleu
+tarif vert
+tarif orange
+tarif rouge
+Le tarif dépend de la situation du conducteur :
+un conducteur de moins de 25 ans et titulaire du permis depuis moins de deux ans, se voit attribuer le tarif rouge,
+si toutefois il n'a jamais été responsable d'accident. Sinon, la compagnie refuse de l'assurer.
+un conducteur de moins de 25 ans et titulaire du permis depuis plus de deux ans, ou de plus de 25 ans mais titulaire 
+du permis depuis moins de deux ans a le droit au tarif orange s'il n'a jamais provoqué d'accident, au tarif rouge pour un accident,
+sinon il est refusé.
+un conducteur de plus de 25 ans titulaire du permis depuis plus de deux ans bénéficie du tarif vert s'il n'est à l'origine 
+d'aucun accident et du tarif orange pour un accident, du tarif rouge pour deux accidents, et refusé au-delà
+De plus, pour encourager la fidélité des clients acceptés, la compagnie propose un contrat de la couleur immédiatement la plus
+avantageuse s'il est entré dans la maison depuis plus de cinq ans. Ainsi, s'il satisfait à cette exigence, 
+un client normalement "vert" devient "bleu", un client normalement "orange" devient "vert", et le "rouge" devient orange.
+Écrire l'algorithme permettant de saisir les données nécessaires et de traiter ce problème. Avant de se lancer à corps perdu 
+dans cet exercice, on pourra réfléchir un peu et s'apercevoir qu'il est plus simple qu'il n'en a l'air !
+
+
+``````````````
+
+let driver = window.prompt("How old is the driver?", "");
+let license = window.prompt("How long have you had your driving license?", "");
+let accident = window.prompt("How many accidents have you had?", "");
+
+function coverage(driver, license, accident) {
+  if(driver < 25 && license < 2) {
+    if(accident != 0) {
+      console.log("Refus");
+    } else {
+      console.log("Tarif Rouge");
+    }
+} else if(driver < 25 && license > 2 || driver > 25 && license < 2) {
+  if(accident == 1) {
+    console.log("Tarif Rouge");
+  } else if(accident != 0) {
+    console.log("Refus");
+  } else {
+    console.log("Tarif Orange");
+  }
+} else if(driver >= 25 && license > 2) {
+  if(accident == 1) {
+    console.log("Tarif Orange");
+  } else if(accident == 2) {
+    console.log("Tarif Rouge");
+  } else if(accident != 0) {
+    console.log("Refus");
+  } else {
+    console.log("Tarif Vert");
+  }
+}
+}
+
+coverage(30, 5, 0); // returns Tarif Vert
+coverage(24, 1, 0); // returns Tarif Rouge
+coverage(27, 1, 3); // returns Refus
+
+````````````````````
+
+----------------------------------------------------------------------------------------------------------------
 
 
 
