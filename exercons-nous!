@@ -257,6 +257,47 @@ date(29, 2, 1984); // returns "Date valide."
 
 ````````````````````
 
+STRUCTURE ITÉRATIVE
+
+TANT QUE... FAIRE
+
+ // Écrivez un algorithme demandant à l'utilisateur de saisir une évaluation. (note de 1 à 5)
+ 
+ let rating = window.prompt("Donnez une note entre 1 et 5", "");
+
+while(rating < 1 && rating > 5) {
+    console.log("Donnez une note entre 1 et 5");
+}
+
+````````````````````
+
+POUR
+
+/* Nous allons écrire un algorithme qui va demander un entier à l'utilisateur,
+puis qui calculera le produit de tous les entiers de 1 à ce nombre et enfin affichera le résultat.*/
+
+
+function factoriel(nombre) {
+  for(let i = nombre - 1; i > 0; i--) {
+    nombre *= i;
+}
+return nombre;
+}
+factoriel();
+console.log(factoriel(5)); // returns 120
+console.log(factoriel(3)); // returns 6
+
+````````````````````
+
+IMBRICATION
+
+Nous allons écrire un algorithme qui demandera à l'utilisateur le nombre de lignes qu'il désire 
+et affichera les résultats suivant lorsqu'il en sera demandé 6 puis 9.
+Attention, il est demandé de contrôler que l'utilisateur saisisse bien une valeur autorisée !
+
+!!! PAS COMPRIS L'EXO 🧑‍💻
+
+
 ----------------    THE END  ----------------  
 
 
