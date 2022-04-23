@@ -1,0 +1,48 @@
+*** Notice that we invite the user to interact with the functions, by using window.prompt("", ""); all along these exercises. ***
+
+EXERCICE 1.1
+
+/*Ecrire un algorithme qui demande un nombre à l’utilisateur, 
+et l’informe ensuite si ce nombre est positif ou négatif 
+(on laisse de côté le cas où le nombre vaut zéro). */
+
+function signe(number) {
+if(number > 0) {
+  console.log("Ce nombre est positif");
+} else {
+  console.log("Ce nombre est négatif");
+}
+}
+signe(1); // returns "Ce nombre est positif"
+signe(-22); // returns "Ce nombre est négatif"
+
+--------------------------------------------------------------------------------
+
+EXERCICE 1.2
+
+/*
+Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si 
+leur produit est négatif ou positif (on laisse de côté le cas où le produit est nul).
+Attention toutefois : on ne doit pas calculer le produit des deux nombres. */
+
+function productSigne(number1, number2) {
+  if(number1 > 0 && number2 < 0 || number1 < 0 && number2 > 0){
+    console.log("Le produit est négatif");
+  } else {
+    console.log("Le produit est positif");
+  }
+}
+productSigne(1, 3); // returns "Le produit est positif"
+productSigne(-1, 3); // returns "Le produit est négatif"
+productSigne(1, -3); // returns "Le produit est négatif"
+productSigne(-1, -3); // returns "Le produit est positif"
+
+--------------------------------------------------------------------------------
+
+Exercice 1.3
+/* Ecrire un algorithme qui demande trois noms à l’utilisateur et l’informe ensuite s’ils sont
+rangés ou non dans l’ordre alphabétique.
+Remarque : une chaine de caractère peut être comparée à une autre. Par exemple la chaine ‘aa’ est inférieur à la chaine ‘ab’ */
+
+
+
