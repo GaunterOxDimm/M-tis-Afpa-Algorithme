@@ -158,7 +158,7 @@ election(13, 16, 15, 15); // returns "Le candidat A passe au second tour en bal
 ----------------------------------------------------------------------------------------------------------------
 ASSURANCE
 
-Une compagnie d'assurance automobile propose à ses clients quatre familles de tarifs identifiables par une couleur, 
+/* Une compagnie d'assurance automobile propose à ses clients quatre familles de tarifs identifiables par une couleur, 
 du moins au plus onéreux :
 tarif bleu
 tarif vert
@@ -176,7 +176,7 @@ De plus, pour encourager la fidélité des clients acceptés, la compagnie propo
 avantageuse s'il est entré dans la maison depuis plus de cinq ans. Ainsi, s'il satisfait à cette exigence, 
 un client normalement "vert" devient "bleu", un client normalement "orange" devient "vert", et le "rouge" devient orange.
 Écrire l'algorithme permettant de saisir les données nécessaires et de traiter ce problème. Avant de se lancer à corps perdu 
-dans cet exercice, on pourra réfléchir un peu et s'apercevoir qu'il est plus simple qu'il n'en a l'air !
+dans cet exercice, on pourra réfléchir un peu et s'apercevoir qu'il est plus simple qu'il n'en a l'air ! */
 
 
 ``````````````
