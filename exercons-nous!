@@ -107,6 +107,20 @@ Le programme demandera donc l'âge et le sexe du Zorglubien, et se prononcera
 donc ensuite sur le fait que l'habitant est imposable ou non. */
 
 `````````
+let age = window.prompt("Enter your age", "");
+let gender = window.prompt("Enter your gender ()(m/f)", "");
+
+function tax(age, gender) {
+  if(age > 20 && gender == "m" || age >= 18 && age <= 35 && gender == "f") {
+    return console.log("Vous êtes imposable");
+  }
+  return console.log("Vous n'êtes pas imposable");
+}
+tax(17, "f");
+
+`````````
+----------------------------------------------------------------------------------------------------------------
+
 
 
 
