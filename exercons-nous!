@@ -116,7 +116,8 @@ function tax(age, gender) {
   }
   return console.log("Vous n'êtes pas imposable");
 }
-tax(17, "f");
+tax(17, "f"); // returns "Vous n'êtes pas imposable"
+tax(25, "m"); // returns "Vous êtes imposable"
 
 `````````
 ----------------------------------------------------------------------------------------------------------------
