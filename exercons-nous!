@@ -108,7 +108,7 @@ donc ensuite sur le fait que l'habitant est imposable ou non. */
 
 `````````
 let age = window.prompt("Enter your age", "");
-let gender = window.prompt("Enter your gender ()(m/f)", "");
+let gender = window.prompt("Enter your gender (m/f)", "");
 
 function tax(age, gender) {
   if(age > 20 && gender == "m" || age >= 18 && age <= 35 && gender == "f") {
