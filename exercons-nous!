@@ -25,8 +25,8 @@ let arr = [];
      return arr;
         }
     clock();
-   console.log(clock(13, 27));
-   console.log(clock(13, 59));
+   console.log(clock(13, 27)); // returns [13, 28]
+   console.log(clock(13, 59)); // returns [14, 0] 
    
 ````````
 
@@ -91,7 +91,7 @@ function bill (copy) {
   return arr;
 }
 bill();
-console.log(bill(50)); // return 4
+console.log(bill(50)); // return [4]
 
 ````````
 
@@ -213,13 +213,50 @@ function coverage(driver, license, accident) {
 }
 }
 
-coverage(30, 5, 0); // returns Tarif Vert
-coverage(24, 1, 0); // returns Tarif Rouge
-coverage(27, 1, 3); // returns Refus
+coverage(30, 5, 0); // returns "Tarif Vert"
+coverage(24, 1, 0); // returns "Tarif Rouge"
+coverage(27, 1, 3); // returns "Refus"
 
 ````````````````````
 
 ----------------------------------------------------------------------------------------------------------------
 
+VÉRIFICATION DE DATE
+
+/* Écrivez un algorithme qui a près avoir demandé un numéro de jour, de mois et d'année à l'utilisateur, 
+renvoie s'il s'agit ou non d'une date valide.
+Il n'est sans doute pas inutile de rappeler rapidement que :
+le mois de février compte 28 jours, sauf si l'année est bissextile, auquel cas il en compte 29.
+L'année est bissextile si elle est divisible par quatre. Toutefois, les années divisibles par 100 ne sont pas bissextiles, 
+mais les années divisibles par 400 le sont.
+Pour exprimer correctement en pseudo-code l'idée qu'un nombre A est divisible par un nombre B. Il suffit d'indiquer que le 
+reste de la division entière de A par B est égal à zéro. Cette opération s'appelle le modulo. Nous pouvons donc dire que A 
+est divisible par B si : Modulo(A,B) = 0
+
+````````````````````
+
+let day = window.prompt("Enter the day", "");
+let month = window.prompt("Enter the month", "");
+let year = window.prompt("Enter the year", "");
+*/
+
+function date(day, month, year) {
+if(day > 0 && day <= 31 && month > 0 && month <= 12){
+    if(month == 4 | month == 6 | month == 9 | month == 11 && day == 31) {
+    console.log("Date non valide.");
+  } else if(year % 4 != 0 && day > 28 && month == 2) {
+    console.log("Date non valide.");
+  } else {
+    console.log("Date valide.");
+  }
+  }
+}
+date(31, 11, 2020); // returns "Date non valide."
+date(29, 2, 2021); // returns "Date non valide."
+date(29, 2, 1984); // returns "Date valide."
+
+````````````````````
+
+----------------    THE END  ----------------  
 
 
