@@ -1,0 +1,208 @@
+*** Notice that we invite the user to interact with the functions, by using window.prompt("", ""); all along these exercises. ***
+
+EXERCICE 1.1
+
+/*Ecrire un algorithme qui demande un nombre à l’utilisateur, 
+et l’informe ensuite si ce nombre est positif ou négatif 
+(on laisse de côté le cas où le nombre vaut zéro). */
+
+function signe(number) {
+if(number > 0) {
+  console.log("Ce nombre est positif");
+} else {
+  console.log("Ce nombre est négatif");
+}
+}
+signe(1); // returns "Ce nombre est positif"
+signe(-22); // returns "Ce nombre est négatif"
+
+--------------------------------------------------------------------------------
+
+EXERCICE 1.2
+
+/*
+Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si 
+leur produit est négatif ou positif (on laisse de côté le cas où le produit est nul).
+Attention toutefois : on ne doit pas calculer le produit des deux nombres. */
+
+function productSigne(number1, number2) {
+  if(number1 > 0 && number2 < 0 || number1 < 0 && number2 > 0){
+    console.log("Le produit est négatif");
+  } else {
+    console.log("Le produit est positif");
+  }
+}
+productSigne(1, 3); // returns "Le produit est positif"
+productSigne(-1, 3); // returns "Le produit est négatif"
+productSigne(1, -3); // returns "Le produit est négatif"
+productSigne(-1, -3); // returns "Le produit est positif"
+
+--------------------------------------------------------------------------------
+
+Exercice 1.3
+/* Ecrire un algorithme qui demande trois noms à l’utilisateur et l’informe ensuite s’ils sont
+rangés ou non dans l’ordre alphabétique.
+Remarque : une chaine de caractère peut être comparée à une autre. Par exemple la chaine ‘aa’ est inférieur à la chaine ‘ab’ 
+
+function sortName(name1, name2, name3) {
+  let arr = [];
+  arr.push(name1, name2, name3);
+  return arr.sort();
+}
+sortName("Yvan", "Khaled", "Albert");
+console.log(sortName("Yvan", "Khaled", "Albert")); // returns [ 'Albert', 'Khaled', 'Yvan' ]
+
+--------------------------------------------------------------------------------
+
+Exercice 1.4
+
+/*  Ecrire un algorithme qui demande un nombre à l’utilisateur, et l’informe ensuite si ce nombre est positif ou négatif
+(on inclut cette fois le traitement du cas où le nombre vaut zéro).   */
+
+function signe(number) {
+if(number > 0) {
+  console.log("Ce nombre est positif");
+} else if(number == 0) {
+  console.log("Ce nombre est nul");
+} else {
+  console.log("Ce nombre est négatif");
+}
+}
+signe(0); // returns "Ce nombre est nul"
+
+--------------------------------------------------------------------------------
+
+Exercice 1.5
+
+/* Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si le produit est négatif ou positif 
+(on inclut cette fois le traitement du cas où le produit peut être nul). Attention toutefois, on ne doit pas calculer le produit ! */
+
+
+function productSigne(number1, number2) {
+  if(number1 > 0 && number2 < 0 || number1 < 0 && number2 > 0){
+    console.log("Le produit est négatif");
+  } else if(number2 == 0 || number1 == 0) {
+    console.log("Le produit est nul");
+  }
+    else {
+    console.log("Le produit est positif");
+  }
+}
+
+productSigne(0, -3); // returns "Le produit est nul"
+productSigne(-1, 0); // returns "Le produit est nul"
+
+
+--------------------------------------------------------------------------------
+
+Exercice 1.6
+
+/* Ecrire un algorithme qui demande l’âge d’un enfant à l’utilisateur. Ensuite, il l’informe de sa catégorie :
+ "Poussin" de 6 à 7 ans
+ "Pupille" de 8 à 9 ans
+ "Minime" de 10 à 11 ans
+ "Cadet" après 12 ans     */
+
+
+function category(age) {
+  if(age == 6 || age == 7){
+    console.log("Poussin");  
+  } else if(age == 8 || age == 9) {
+    console.log("Pupille");
+  } else if(age == 10 || age == 11) {
+    console.log("Minime");
+  } else if(age >= 12) {
+    console.log("Cadet");
+  }
+}
+
+category(9); // returns "Pupille"
+category(90); // returns "Cadet"
+
+--------------------------------------------------------------------------------
+
+PARTIE 2 – ENCORE DE LA LOGIQUE
+ENONCE DES EXERCICES
+
+Exercice 2.1
+
+Cet algorithme est destiné à prédire l'avenir, et il doit être infaillible !
+Il lira au clavier l’heure et les minutes, et il affichera l’heure qu’il sera une minute plus tard.
+Par exemple, si l'utilisateur tape 21 puis 32, l'algorithme doit répondre :
+"Dans une minute, il sera 21 heure(s) 33".
+NB : on suppose que l'utilisateur entre une heure valide. Pas besoin donc de la vérifier.
+
+function clock(hour, minutes) {  
+let arr = [];
+  if(0 <= minutes && minutes < 59) {
+      arr.push(hour, minutes + 1);
+  } else if(minutes == 59){
+    arr.push(hour + 1, 0);
+    if(hour == 23){
+      arr.push(0, 0);
+    }
+  }
+     return "Dans 1 minute, il sera " + arr[0].toString() + " heure(s) " + arr[1].toString();
+        }
+    clock(21, 32);
+    console.log(clock(21, 32)); // returns "Dans 1 minute, il sera 21 heure(s) 33"
+
+--------------------------------------------------------------------------------
+
+Exercice 2.2
+
+De même que le précédent, cet algorithme doit demander une heure et en afficher une autre. 
+Mais cette fois, il doit gérer également les secondes, et afficher l'heure qu'il sera une seconde plus tard.
+Par exemple, si l'utilisateur tape 21, puis 32, puis 8, l'algorithme doit répondre :
+"Dans une seconde, il sera 21 heure(s), 32 minute(s) et 9 seconde(s)".
+NB : là encore, on suppose que l'utilisateur entre une heure valide.
+
+function clock(hour, minutes, seconds) {  
+let arr = [];
+  if(0 <= seconds && seconds < 59) {
+      arr.push(hour, minutes, seconds + 1);
+  } else if(seconds == 59){
+    arr.push(hour, minutes + 1, 0);
+    if(minutes == 59){
+      arr = [];
+      arr.push((hour + 1), 0, 0);
+      if(hour == 23){
+        arr = [];
+        arr.push(0, 0, 0);
+      } 
+    }
+  }
+     return "Dans une seconde, il sera " + arr[0].toString() + " heure(s) " + arr[1].toString();
+        }
+  clock(23, 59, 59);
+  console.log(clock(23, 59, 59)); // returns Dans une seconde, il sera 0 heure(s) 0
+  clock(23, 59, 58);
+  console.log(clock(23, 59, 58)); // returns Dans une seconde, il sera 23 heure(s) 59
+  
+  --------------------------------------------------------------------------------
+
+Exercice 2.3
+Un magasin de reprographie facture 0,10 € les dix premières photocopies, 0,09 € les vingt suivantes et 0,08 € au-delà.
+Ecrivez un algorithme qui demande à l’utilisateur le nombre de photocopies effectuées et qui affiche la facture correspondante.
+Attention, les 10 premières photocopies restent tout le temps à 10 cts et les 11 à 20 photocopies à 9 cts.
+
+function bill (copy) {
+  let arr = [];
+  if(copy <= 10) {
+    arr.push(copy * 0.1);
+  } else if(copy <= 30) {
+    arr.push(copy * 0.09);
+  } else if(copy > 30) {
+    arr.push(copy * 0.08);
+  }
+  return arr.toString() + " €";
+}
+bill();
+console.log(bill(50)); // returns 4 €
+console.log(bill(10)); // returns 1 €
+
+--------------------------------------------------------------------------------
+
+
+    
+    
