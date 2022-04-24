@@ -31,4 +31,32 @@ for(let simsAlpha = 0; simsAlpha != simsBeta; simsAlpha++) {
 
 -----------------------------------------------------------------------------------------
 
+/* Exercice 5 : (serie 02 -Algorithmique-exercices)
+
+Ecrire un algorithme permettant de résoudre le problème suivant :
+– Données : un tableau contenant 20 entiers
+– Résultat : “vrai” si le tableau est trié du plus petit au plus grand et “faux” sinon*/
+
+function consecutive(arr) {
+    if(arr.sort(function(a, b){return a-b}) == arr){
+      return "vrai";
+    } else {
+      return "faux";
+    }
+  
+}                !!!!!!!!!!!!!   le code est faux je n'ai pas réussi cet exercice    !!!!!!!!!!!!!!!!!!!!
+
+
+-----------------------------------------------------------------------------------------
+
+
+/*Exercice 6 :
+Suppression des doublons
+Écrire un algorithme permettant, à partir d’une liste triée comportant des doublons (éléments déjà présents) arriver à créer la même liste sans les doublons.
+À partir de la liste [3, 3, 6, 9, 9, 9, 9, 11], on obtiendra la liste [3, 6, 9, 11].
+
+REGEXP ??
+
+-----------------------------------------------------------------------------------------
+
 
