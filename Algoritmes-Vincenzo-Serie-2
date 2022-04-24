@@ -70,8 +70,8 @@ function consecutive(arr) {
     return arr;
     }
   consecutive(["oiuh", "lj", "kthrbjstd", "khgc"])
-console.log(consecutive(["oiuh", "lj", "kthrbjstd", "khgc"])); // returns [ 'khgc', 'kthrbjstd', 'lj', 'oiuh' ]
+console.log(consecutive(["oiuh", "lj", "kthrbjstd", "khgc"]));         // returns [ 'khgc', 'kthrbjstd', 'lj', 'oiuh' ]
 consecutive([6, 9, 3, 0])
-console.log(consecutive([6, 9, 3, 0])); // returns [ 0, 3, 6, 9 ]
+console.log(consecutive([6, 9, 3, 0]));          // returns [ 0, 3, 6, 9 ]
 
 ---------------------------------------- THE END --------------------------------------------------------------------
