@@ -173,12 +173,12 @@ let arr = [];
       } 
     }
   }
-     return "Dans une seconde, il sera " + arr[0].toString() + " heure(s) " + arr[1].toString();
+     return "Dans une seconde, il sera " + arr[0].toString() + " heure(s) " + arr[1].toString() + " minute(s) " + arr[2].toString() + " seconde(s).";
         }
   clock(23, 59, 59);
-  console.log(clock(23, 59, 59)); // returns Dans une seconde, il sera 0 heure(s) 0
+  console.log(clock(23, 59, 59)); // returns Dans une seconde, il sera 0 heure(s) 0 minute(s) 0 seconde(s).
   clock(23, 59, 58);
-  console.log(clock(23, 59, 58)); // returns Dans une seconde, il sera 23 heure(s) 59
+  console.log(clock(23, 59, 58)); // returns Dans une seconde, il sera 23 heure(s) 59 minute(s) 59 seconde(s).
   
   --------------------------------------------------------------------------------
 
