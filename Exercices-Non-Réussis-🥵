@@ -19,15 +19,21 @@ Ecrire un algorithme permettant de déterminer dans combien d’années la popul
 
 ?????????????????????????????????
 let year;
-let simsAlpha = 5 * 10^5 * year + 10^7;
-let simsBeta = 1.5 * 10^5 * year + 5 * 10^6;
-for(let simsAlpha = 0; simsAlpha != simsBeta; simsAlpha++) {
-  if(simsAlpha == simsBeta){
+let simsAlpha = function(year) {
+  5 * 10^5 * year + 10^7;
+  return year;
+  }
+let simsBeta = function (year) {
+  1.5 * 10^5 * year + 5 * 10^6;
+  return year;
+  } 
+for(let year = 0; year > -20; year--) {
+  if(simsAlpha(year) === simsBeta(year)){
     console.log(year);
   } else {
-    console.log("stop");
+    console.log("stop")
   }
-}                !!!!!!!!!!!!!   le code est faux je n'ai pas réussi cet exercice    !!!!!!!!!!!!!!!!!!!!
+}           !!!!!!!!!!!!!   le code est faux je n'ai pas réussi cet exercice    !!!!!!!!!!!!!!!!!!!!
 
 -----------------------------------------------------------------------------------------
 
