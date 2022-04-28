@@ -44,7 +44,7 @@ Ecrire un algorithme permettant de résoudre le problème suivant :
 – Résultat : “vrai” si le tableau est trié du plus petit au plus grand et “faux” sinon*/
 
 function consecutive(arr) {
-    if(arr.sort(function(a, b){return a-b}) == arr){
+    if(arr.sort(function(a, b){return a-b}) == arr){ // verifier que les nombres sont triés -  ne pas les trier
       return "vrai";
     } else {
       return "faux";
