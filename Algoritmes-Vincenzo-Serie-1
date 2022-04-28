@@ -1,7 +1,7 @@
 
 *** Notice that all along these exercises, we invite the user to interact with the functions, by using ``` let variable = window.prompt("", ""); ``` . ***
 
-EXERCICE 1.1
+// EXERCICE 1.1
 
 /*Ecrire un algorithme qui demande un nombre à l’utilisateur, 
 et l’informe ensuite si ce nombre est positif ou négatif 
@@ -19,7 +19,7 @@ signe(-22); // returns "Ce nombre est négatif"
 
 --------------------------------------------------------------------------------
 
-EXERCICE 1.2
+// EXERCICE 1.2
 
 /*
 Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si 
@@ -40,10 +40,10 @@ productSigne(-1, -3); // returns "Le produit est positif"
 
 --------------------------------------------------------------------------------
 
-Exercice 1.3
+// Exercice 1.3
 /* Ecrire un algorithme qui demande trois noms à l’utilisateur et l’informe ensuite s’ils sont
 rangés ou non dans l’ordre alphabétique.
-Remarque : une chaine de caractère peut être comparée à une autre. Par exemple la chaine ‘aa’ est inférieur à la chaine ‘ab’ 
+Remarque : une chaine de caractère peut être comparée à une autre. Par exemple la chaine ‘aa’ est inférieur à la chaine ‘ab’ */
 
 function sortName(name1, name2, name3) {
   let arr = [];
@@ -55,27 +55,27 @@ console.log(sortName("Yvan", "Khaled", "Albert")); // returns [ 'Albert', 'Khale
 
 --------------------------------------------------------------------------------
 
-Exercice 1.4
+// Exercice 1.4
 
 /*  Ecrire un algorithme qui demande un nombre à l’utilisateur, et l’informe ensuite si ce nombre est positif ou négatif
 (on inclut cette fois le traitement du cas où le nombre vaut zéro).   */
 
 function signe(number) {
 if(number > 0) {
-  console.log("Ce nombre est positif");
-} else if(number == 0) {
-  console.log("Ce nombre est nul");
-} else {
-  console.log("Ce nombre est négatif");
-}
+    console.log("Ce nombre est positif");
+  } else if(number == 0) {
+    console.log("Ce nombre est nul");
+  } else {
+    console.log("Ce nombre est négatif");
+  }
 }
 signe(0); // returns "Ce nombre est nul"
 
 --------------------------------------------------------------------------------
 
-Exercice 1.5
+/* Exercice 1.5
 
-/* Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si le produit est négatif ou positif 
+ Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si le produit est négatif ou positif 
 (on inclut cette fois le traitement du cas où le produit peut être nul). Attention toutefois, on ne doit pas calculer le produit ! */
 
 
@@ -84,8 +84,7 @@ function productSigne(number1, number2) {
     console.log("Le produit est négatif");
   } else if(number2 == 0 || number1 == 0) {
     console.log("Le produit est nul");
-  }
-    else {
+  } else {
     console.log("Le produit est positif");
   }
 }
@@ -96,9 +95,9 @@ productSigne(-1, 0); // returns "Le produit est nul"
 
 --------------------------------------------------------------------------------
 
-Exercice 1.6
+/* Exercice 1.6
 
-/* Ecrire un algorithme qui demande l’âge d’un enfant à l’utilisateur. Ensuite, il l’informe de sa catégorie :
+ Ecrire un algorithme qui demande l’âge d’un enfant à l’utilisateur. Ensuite, il l’informe de sa catégorie :
  "Poussin" de 6 à 7 ans
  "Pupille" de 8 à 9 ans
  "Minime" de 10 à 11 ans
@@ -122,7 +121,7 @@ category(90); // returns "Cadet"
 
 --------------------------------------------------------------------------------
 
-PARTIE 2 – ENCORE DE LA LOGIQUE
+/* PARTIE 2 – ENCORE DE LA LOGIQUE
 ENONCE DES EXERCICES
 
 Exercice 2.1
@@ -131,7 +130,7 @@ Cet algorithme est destiné à prédire l'avenir, et il doit être infaillible !
 Il lira au clavier l’heure et les minutes, et il affichera l’heure qu’il sera une minute plus tard.
 Par exemple, si l'utilisateur tape 21 puis 32, l'algorithme doit répondre :
 "Dans une minute, il sera 21 heure(s) 33".
-NB : on suppose que l'utilisateur entre une heure valide. Pas besoin donc de la vérifier.
+NB : on suppose que l'utilisateur entre une heure valide. Pas besoin donc de la vérifier. */
 
 function clock(hour, minutes) {  
 let arr = [];
@@ -139,24 +138,24 @@ let arr = [];
       arr.push(hour, minutes + 1);
   } else if(minutes == 59){
     arr.push(hour + 1, 0);
-    if(hour == 23){
-      arr.push(0, 0);
-    }
+      if(hour == 23){
+        arr.push(0, 0);
+      }
   }
      return "Dans 1 minute, il sera " + arr[0].toString() + " heure(s) " + arr[1].toString();
-        }
+}
     clock(21, 32);
     console.log(clock(21, 32)); // returns "Dans 1 minute, il sera 21 heure(s) 33"
 
 --------------------------------------------------------------------------------
 
-Exercice 2.2
+/* Exercice 2.2
 
 De même que le précédent, cet algorithme doit demander une heure et en afficher une autre. 
 Mais cette fois, il doit gérer également les secondes, et afficher l'heure qu'il sera une seconde plus tard.
 Par exemple, si l'utilisateur tape 21, puis 32, puis 8, l'algorithme doit répondre :
 "Dans une seconde, il sera 21 heure(s), 32 minute(s) et 9 seconde(s)".
-NB : là encore, on suppose que l'utilisateur entre une heure valide.
+NB : là encore, on suppose que l'utilisateur entre une heure valide. */
 
 function clock(hour, minutes, seconds) {  
 let arr = [];
@@ -174,7 +173,7 @@ let arr = [];
     }
   }
      return "Dans une seconde, il sera " + arr[0].toString() + " heure(s) " + arr[1].toString() + " minute(s) " + arr[2].toString() + " seconde(s).";
-        }
+}
   clock(23, 59, 59);
   console.log(clock(23, 59, 59)); // returns Dans une seconde, il sera 0 heure(s) 0 minute(s) 0 seconde(s).
   clock(23, 59, 58);
@@ -182,10 +181,10 @@ let arr = [];
   
   --------------------------------------------------------------------------------
 
-Exercice 2.3
+/* Exercice 2.3
 Un magasin de reprographie facture 0,10 € les dix premières photocopies, 0,09 € les vingt suivantes et 0,08 € au-delà.
 Ecrivez un algorithme qui demande à l’utilisateur le nombre de photocopies effectuées et qui affiche la facture correspondante.
-Attention, les 10 premières photocopies restent tout le temps à 10 cts et les 11 à 20 photocopies à 9 cts.
+Attention, les 10 premières photocopies restent tout le temps à 10 cts et les 11 à 20 photocopies à 9 cts. */
 
 function bill (copy) {
   let arr = [];
@@ -204,12 +203,12 @@ console.log(bill(10)); // returns 1 €
 
 --------------------------------------------------------------------------------
 
-PARTIE 2 – LES BOUCLES
+/* PARTIE 2 – LES BOUCLES
 ENONCE DES EXERCICES
 
 Exercice 2.1
 
-Ecrire un algorithme qui demande à l’utilisateur un nombre compris entre 1 et 3 jusqu’à ce que la réponse convienne.
+Ecrire un algorithme qui demande à l’utilisateur un nombre compris entre 1 et 3 jusqu’à ce que la réponse convienne. */
 
 let num = window.prompt("Enter a number from 1 to 3", "");
 
@@ -223,21 +222,21 @@ let num = 2 // returns "Good job!"
 
 --------------------------------------------------------------------------------
 
-Exercice 2.2
+/* Exercice 2.2
 Ecrire un algorithme qui demande un nombre compris entre 10 et 20, jusqu’à ce que la réponse convienne. 
 En cas de réponse supérieure à 20, on fera apparaître un message : « Plus petit ! », et inversement, 
-« Plus grand ! » si le nombre est inférieur à 10.
+« Plus grand ! » si le nombre est inférieur à 10. */
 
 function match(num){
-if (num < 10) {
-  console.log("Plus grand !");
-} else if(num > 20){
-  console.log("Plus petit !");
-} else if(num > 10 && num < 20 && num == 20 - 5) {
-  console.log("Good job !");
-} else {
-  console.log("Try again !");
-}
+  if (num < 10) {
+    console.log("Plus grand !");
+  } else if(num > 20){
+    console.log("Plus petit !");
+  } else if(num > 10 && num < 20 && num == 20 - 5) {
+    console.log("Good job !");
+  } else {
+    console.log("Try again !");
+  }
 
 }
 match(34); // returns "Plus petit !"
@@ -246,7 +245,7 @@ match(7); // returns "Plus grand !"
 
 --------------------------------------------------------------------------------
 
-Exercice 2.3
+// Exercice 2.3
 
 /* Ecrire un algorithme qui demande un nombre de départ, et qui ensuite affiche les dix nombres suivants. 
 Par exemple, si l'utilisateur entre le nombre 17, le programme affichera les nombres de 18 à 27. */
@@ -265,14 +264,14 @@ console.log(plus10(20)); // returns [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 ]
 
 --------------------------------------------------------------------------------
 
-Exercice 2.4
+// Exercice 2.4
 
-Ecrire un algorithme qui demande un nombre de départ, et qui ensuite écrit la table de multiplication de ce nombre,
-présentée comme suit (cas où l'utilisateur entre le nombre 7) :
+/* Ecrire un algorithme qui demande un nombre de départ, et qui ensuite écrit la table de multiplication de ce nombre,
+présentée comme suit (cas où l'utilisateur entre le nombre 7) : 
 Table de 7 :
 7x1=7
 7 x 2 = 14 7 x 3 = 21 ...
-7 x 10 = 70
+7 x 10 = 70 */
 
 function multiply(num) {
   let arr = [];
@@ -286,18 +285,18 @@ console.log(multiply(3)); // returns [ '3 x 0 = 0', '3 x 1 = 3', '3 x 2 = 6', '3
 
 --------------------------------------------------------------------------------
 
-Exercice 2.5
-Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d’avance combien l’utilisateur souhaite saisir de nombres. 
-La saisie des nombres s’arrête lorsque l’utilisateur entre un zéro.
+// Exercice 2.5
+/* Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d’avance combien l’utilisateur souhaite saisir de nombres. 
+La saisie des nombres s’arrête lorsque l’utilisateur entre un zéro. */
 
 function multiply(num) {
   if(num != 0) {
-  let arr = [];
-  for(let i = 0; i <= 10; i++) {
-     arr.push(num + " x " + i + " = " + i * num);
-  } 
-  return arr;
-} else {
+    let arr = [];
+    for(let i = 0; i <= 10; i++) {
+      arr.push(num + " x " + i + " = " + i * num);
+    } 
+    return arr;
+  } else {
   console.log("STOP");
   }
 }
@@ -308,12 +307,12 @@ console.log(multiply(0)); // returns "STOP"
 
 -------------------------------------------------------------------------------- 
 
-PARTIE 3 – LES TABLEAUX
+/* PARTIE 3 – LES TABLEAUX
 ENONCE DES EXERCICES
 
 Exercice 3.1
 
-Ecrire un algorithme qui déclare et remplisse un tableau de 7 valeurs numériques en les mettant toutes à zéro.
+Ecrire un algorithme qui déclare et remplisse un tableau de 7 valeurs numériques en les mettant toutes à zéro. */
 
 function array() {
   let arr = [];
