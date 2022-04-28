@@ -1,8 +1,8 @@
 *** Notice that we invite the user to interact with the functions, by using ``` let variable = window.prompt("", ""); ``` all along these exercises. ***
 
-EXERCICE 1
+/* EXERCICE 1
 
-Dessinez à l’aide de l’outil graphique, la piscine et sa clôture demandées par le client.
+Dessinez à l’aide de l’outil graphique, la piscine et sa clôture demandées par le client. */
 
 function prix(espaceL, espacel, longueurPiscine, largeurPiscine) {
   console.log(((2 * (2 * espacel + largeurPiscine)) + 2 * (2 * espaceL + longueurPiscine)) * 120);
@@ -10,13 +10,6 @@ function prix(espaceL, espacel, longueurPiscine, largeurPiscine) {
 prix(1, 1, 1, 1); // returns 1440
 
 -----------------------------------------------------------------------------------------------
-
-
-Exercice 2 :
-L’utilisateur saisit le nombre de fois que l’on lance un dé à 6 faces numérotées de 1 à 6.
-L’algorithme simule cette série de lancers, puis calcule et affiche la fréquence d’apparition de chaque nombre 1, 2, 3, 4, 5 et 6
-Dans « Pratiquer l’algorithme », la fonction Aléatoire ( nombreMax ) permet d’obtenir un nombre aléatoire entre 1 et nombreMax.
-
 
 /* Exercice 2 :
 L’utilisateur saisit le nombre de fois que l’on lance un dé à 6 faces numérotées de 1 à 6.
@@ -26,7 +19,7 @@ Dans « Pratiquer l’algorithme », la fonction Aléatoire ( nombreMax ) permet
 function random(lancer) {
   let arr = [];
   for(let i = 0; i < lancer; i++) {
-  arr.push(Math.floor(Math.random(i) * (6 - 1) + 1));
+    arr.push(Math.floor(Math.random(i) * (6 - 1) + 1));
   }
   return arr;
 }
@@ -59,16 +52,17 @@ consecutive([2, 3, 4, 5, 6, 0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 
 -----------------------------------------------------------------------------------------------
 
-Exercice 7 :
-Trier un tableau :
+//Exercice 7 :
+/* Trier un tableau :
 Écrire un algorithme permettant de trier les éléments contenus dans un tableau.
-Vous pourrez vous inspirer des algorithmes classiques de tris que vous trouverez sur le web. Un des plus simple étant le tri à bulle .... Avec un peu d’humour :*/
+Vous pourrez vous inspirer des algorithmes classiques de tris que vous trouverez sur le web. 
+Un des plus simple étant le tri à bulle ....Avec un peu d’humour :*/
 
 function consecutive(arr) {
     arr.sort(function(a, b){return a-b})
     arr.sort()
     return arr;
-    }
+}
   consecutive(["oiuh", "lj", "kthrbjstd", "khgc"])
 console.log(consecutive(["oiuh", "lj", "kthrbjstd", "khgc"]));         // returns [ 'khgc', 'kthrbjstd', 'lj', 'oiuh' ]
 consecutive([6, 9, 3, 0])
