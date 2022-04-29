@@ -8,11 +8,11 @@ et l’informe ensuite si ce nombre est positif ou négatif
 (on laisse de côté le cas où le nombre vaut zéro). */
 
 function signe(number) {
-if(number > 0) {
-  console.log("Ce nombre est positif");
-} else {
-  console.log("Ce nombre est négatif");
-}
+  if(number > 0) {
+    console.log("Ce nombre est positif");
+  } else {
+    console.log("Ce nombre est négatif");
+  }
 }
 signe(1); // returns "Ce nombre est positif"
 signe(-22); // returns "Ce nombre est négatif"
