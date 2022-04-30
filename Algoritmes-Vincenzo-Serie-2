@@ -16,16 +16,49 @@ L’utilisateur saisit le nombre de fois que l’on lance un dé à 6 faces num�
 L’algorithme simule cette série de lancers, puis calcule et affiche la fréquence d’apparition de chaque nombre 1, 2, 3, 4, 5 et 6
 Dans « Pratiquer l’algorithme », la fonction Aléatoire ( nombreMax ) permet d’obtenir un nombre aléatoire entre 1 et nombreMax. */
 
+let arr = [];     // Declare an empty array on the global scope
+
 function random(lancer) {
-  let arr = [];
-  for(let i = 0; i < lancer; i++) {
-    arr.push(Math.floor(Math.random(i) * (6 - 1) + 1));
+  for(let i = 0; i < lancer; i++) {                       // Loop with "i" for each throw until reach "lancer" time
+    arr.push(Math.floor(Math.random(i) * (6 - 1) + 1));   // Push the random numbers from "1" to "lancer", on the "arr" variable
   }
-  return arr;
+  return arr; 
 }
 
-random();
-console.log(random(10)) // returns [ 4, 1, 4, 2, 4, 5, 1, 5, 1, 5 ]
+function frequ(arr) {   // Pass the new "arr" array into the function "frequ()"
+  let arrF = [];        // Declare another empty array "arrF" to store the frequency values for each number 
+  let face1 = 0;           // Declare a variable to count the frequency, for each dice face
+  let face2 = 0;
+  let face3 = 0;
+  let face4 = 0;
+  let face5 = 0;
+  let face6 = 0;
+      for(let i = 0; i < arr.length; i++) {     // Loop into "arr" to match each index
+        if(arr[i] == 1) {
+          face1++; 
+        } else if(arr[i] == 2) {
+          face2++; 
+        } else if(arr[i] == 3) {
+          face3++; 
+        } else if(arr[i] == 4) {
+          face4++; 
+        } else if(arr[i] == 5) {
+          face5++; 
+        } else if(arr[i] == 6) {
+          face6++; 
+        }
+      }
+  arrF.push("Face 1: " + (face1 / arr.length) * 100 + " %", "Face 2: " + (face2 / arr.length) * 100 + " %", "Face 3: " + (face3 / arr.length) * 100 + " %", "Face 4: " + (face4 / arr.length) * 100 + " %", "Face 5: " + (face5 / arr.length) * 100 + " %", "Face 6: " + (face6 / arr.length) * 100 + " %"); // Push the ratio of each frequency by the total of throws, in "arrF"
+  return arrF;
+ }
+
+console.log(random(10)) // [ 4, 2, 4, 1, 4, 3, 5, 1, 1, 2 ]
+console.log(frequ(arr)) // returns  [ 'Face 1: 30 %',
+                                      'Face 2: 20 %',
+                                      'Face 3: 10 %',
+                                      'Face 4: 30 %',
+                                      'Face 5: 10 %',
+                                      'Face 6: 0 %' ]
 
 -----------------------------------------------------------------------------------------------
 
