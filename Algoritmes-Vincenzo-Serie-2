@@ -86,6 +86,28 @@ consecutive([2, 3, 4, 5, 6, 0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 
 -----------------------------------------------------------------------------------------------
 
+/*Exercice 6 :
+Suppression des doublons
+Écrire un algorithme permettant, à partir d’une liste triée comportant des doublons (éléments déjà présents) arriver à créer la même liste sans les doublons.
+À partir de la liste [3, 3, 6, 9, 9, 9, 9, 11], on obtiendra la liste [3, 6, 9, 11].
+
+
+function kill2(arr) {
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    while(arr[i] == arr[i + 1]){
+    i++;
+    } 
+    newArr.push(arr[i]);
+    
+  }
+return newArr;
+}
+kill2([2, 8, 6, 6, 6, 6, 9, 0]);
+console.log(kill2([2, 8, 6, 6, 6, 6, 9, 9, 0, 0, 7])); // returns [ 2, 8, 9, 0 ] 
+
+-----------------------------------------------------------------------------------------------
+
 //Exercice 7 :
 /* Trier un tableau :
 Écrire un algorithme permettant de trier les éléments contenus dans un tableau.
