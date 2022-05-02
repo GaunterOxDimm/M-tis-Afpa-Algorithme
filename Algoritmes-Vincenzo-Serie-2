@@ -2,12 +2,14 @@
 
 /* EXERCICE 1
 
-Dessinez à l’aide de l’outil graphique, la piscine et sa clôture demandées par le client. */
-
 function prix(espaceL, espacel, longueurPiscine, largeurPiscine) {
-  console.log(((2 * (2 * espacel + largeurPiscine)) + 2 * (2 * espaceL + longueurPiscine)) * 120);
+  let perimetreCloture = 2 * (2 * espacel + largeurPiscine + 2 * espaceL + longueurPiscine);
+  let coutCloture = perimetreCloture * 120
+  console.log("Le périmétre de la clotûre est de " + perimetreCloture + " métres.");
+  console.log("Le coût de la clotûre est de " + coutCloture + " €.");
 }
-prix(1, 1, 1, 1); // returns 1440
+prix(1, 1, 1, 1); // returns Le périmétre de la clotûre est de 12 métres.
+                  // Le coût de la clotûre est de 1440 €.
 
 -----------------------------------------------------------------------------------------------
 
@@ -68,6 +70,7 @@ Ecrire un algorithme permettant de résoudre le problème suivant : – Données
  On va donc parcourir le tableau et écrire vrai ou faux suivant la condition énoncée. Rappel : deux entiers sont 
 consécutifs si le deuxième est égal au premier + 1.*/
 
+
 function consecutive(arr) {
   for(let i = 0; i < arr.length; i++) {
     if(arr[i + 1] == arr[i] + 1){
@@ -78,11 +81,11 @@ function consecutive(arr) {
   
   }
 }
-consecutive([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]);
-// returns vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai,vrai, vrai, vrai, vrai,vrai, vrai, vrai, vrai,vrai, vrai, vrai, vrai, faux
-consecutive([2, 3, 4, 5, 6, 0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]);
-// vrai, vrai, vrai, vrai, faux, faux, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, faux
+consecutive([2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]); /* returns vrai, vrai, vrai, vrai, 
+vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, faux */
 
+consecutive([2, 4, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]); /* returns faux, faux, faux, vrai, 
+vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, vrai, faux */
 
 -----------------------------------------------------------------------------------------------
 
