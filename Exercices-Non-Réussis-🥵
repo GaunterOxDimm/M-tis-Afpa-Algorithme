@@ -37,22 +37,4 @@ for(let year = 0; year > -20; year--) {
 
 -----------------------------------------------------------------------------------------
 
-/* Exercice 5 : (serie 02 -Algorithmique-exercices)
-
-Ecrire un algorithme permettant de résoudre le problème suivant :
-– Données : un tableau contenant 20 entiers
-– Résultat : “vrai” si le tableau est trié du plus petit au plus grand et “faux” sinon*/
-
-function consecutive(arr) {
-    if(arr.sort(function(a, b){return a-b}) == arr){ // verifier que les nombres sont triés -  ne pas les trier
-      return "vrai";
-    } else {
-      return "faux";
-    }
-  
-}                !!!!!!!!!!!!!   le code est faux je n'ai pas réussi cet exercice    !!!!!!!!!!!!!!!!!!!!
-
-
------------------------------------------------------------------------------------------
-
 
